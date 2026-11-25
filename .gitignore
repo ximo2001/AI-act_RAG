@@ -1,0 +1,51 @@
+# --- Sistema operativo / editor ---
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# --- Entorno / secretos ---
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# --- Logs ---
+*.log
+logs/
+
+# --- Node ---
+node_modules/
+/dist/
+/build/
+/coverage/
+.npm/
+.pnpm-store/
+
+# --- Python ---
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+*.egg-info/
+
+# --- Java / Kotlin ---
+target/
+*.class
+.gradle/
+
+# --- Go ---
+/bin/
+
+# --- General build/output (solo en la raíz: no afecta a
+# src/**/ports/out o src/**/adapters/out de la arquitectura hexagonal) ---
+/out/
+/tmp/
+*.tmp
+
