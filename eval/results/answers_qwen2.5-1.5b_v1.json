@@ -1,0 +1,1352 @@
+{
+  "env": {
+    "date_utc": "2026-11-25T23:22:00+00:00",
+    "python": "3.13.18",
+    "machine": "x86_64",
+    "cpu_count": 4
+  },
+  "config": {
+    "llm": "llama_cpp:qwen2.5-1.5b-instruct-q4_k_m.gguf",
+    "prompt_version": "v1",
+    "retrieval_mode": "hybrid",
+    "embedding_model": "models/bge-small-en-v1.5",
+    "reranker_model": "models/ms-marco-MiniLM-L-6-v2",
+    "translate_queries": true,
+    "chunk_words": 150,
+    "top_k": 5,
+    "max_tokens": 384,
+    "seed": 42
+  },
+  "summary": {
+    "n_questions": 40,
+    "citation_correct": 0.75,
+    "citation_precision": 0.4698924731182796,
+    "citation_recall": 0.7096774193548387,
+    "abstain_correct_unanswerable": 0.5,
+    "false_abstention_answerable": 0.03125,
+    "parse_error_rate": 0.025,
+    "faithfulness_en": 0.6923076923076923,
+    "numbers_grounded": 1.0,
+    "yes_no_correct": 0.5714285714285714,
+    "key_facts_recall": 0.6944444444444444,
+    "latency_ms_mean": 14218.41,
+    "latency_ms_p50": 11835.05,
+    "latency_ms_max": 52078.4,
+    "generation_ms_mean": 13311.31,
+    "retrieval_ms_mean": 907.1
+  },
+  "records": [
+    {
+      "id": "q01",
+      "lang": "en",
+      "answerable": true,
+      "question": "What fines apply for non-compliance with the prohibited AI practices?",
+      "gold": [
+        "Article 99"
+      ],
+      "answer": "EUR 35,000,000 or, if the offender is an undertaking, up to 7% of its total worldwide annual turnover for the preceding financial year, whichever is higher.",
+      "cited": [
+        "Article 99"
+      ],
+      "confidence": "high",
+      "abstained": false,
+      "parse_error": false,
+      "retrieved_units": [
+        "Article 99",
+        "Article 100",
+        "Article 80",
+        "Recital 179",
+        "Article 81"
+      ],
+      "latency_ms": {
+        "retrieval": 579.0,
+        "generation": 11771.9,
+        "total": 12350.8
+      },
+      "raw_output": "{\"answer\": \"EUR 35,000,000 or, if the offender is an undertaking, up to 7% of its total worldwide annual turnover for the preceding financial year, whichever is higher.\", \"cited_articles\": [\"Article 99\"], \"confidence\": \"high\"}",
+      "correct": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "faithfulness": 1.0,
+      "numbers_grounded": 1.0,
+      "reference": "Administrative fines of up to EUR 35 000 000 or, for undertakings, up to 7 % of total worldwide annual turnover, whichever is higher (Art. 99(3))."
+    },
+    {
+      "id": "q02",
+      "lang": "en",
+      "answerable": true,
+      "question": "From what date does the AI Act generally apply?",
+      "gold": [
+        "Article 113",
+        "Recital 179"
+      ],
+      "answer": "2 February 2025",
+      "cited": [
+        "Recital 179"
+      ],
+      "confidence": "high",
+      "abstained": false,
+      "parse_error": false,
+      "retrieved_units": [
+        "Recital 179",
+        "Article 111",
+        "Recital 177"
+      ],
+      "latency_ms": {
+        "retrieval": 548.6,
+        "generation": 7341.4,
+        "total": 7890.0
+      },
+      "raw_output": "{\"answer\": \"2 February 2025\", \"cited_articles\": [\"Recital 179\"], \"confidence\": \"high\"}",
+      "correct": 1.0,
+      "precision": 1.0,
+      "recall": 0.5,
+      "faithfulness": 1.0,
+      "numbers_grounded": 1.0,
+      "reference": "It applies from 2 August 2026 (Art. 113), with exceptions."
+    },
+    {
+      "id": "q03",
+      "lang": "en",
+      "answerable": true,
+      "question": "From which date do the prohibitions on certain AI practices apply?",
+      "gold": [
+        "Article 113",
+        "Recital 179"
+      ],
+      "answer": "2 February 2025",
+      "cited": [
+        "Recital 179"
+      ],
+      "confidence": "high",
+      "abstained": false,
+      "parse_error": false,
+      "retrieved_units": [
+        "Recital 179",
+        "Article 5"
+      ],
+      "latency_ms": {
+        "retrieval": 461.5,
+        "generation": 5829.4,
+        "total": 6290.9
+      },
+      "raw_output": "{\"answer\": \"2 February 2025\", \"cited_articles\": [\"Recital 179\"], \"confidence\": \"high\"}",
+      "correct": 1.0,
+      "precision": 1.0,
+      "recall": 0.5,
+      "faithfulness": 1.0,
+      "numbers_grounded": 1.0,
+      "reference": "Chapters I and II (including Article 5) apply from 2 February 2025 (Art. 113(a))."
+    },
+    {
+      "id": "q04",
+      "lang": "en",
+      "answerable": true,
+      "question": "Above what amount of training compute is a general-purpose AI model presumed to have high-impact capabilities?",
+      "gold": [
+        "Article 51"
+      ],
+      "answer": "10^25 floating point operations",
+      "cited": [
+        "Article 51",
+        "Recital 112",
+        "Recital 111",
+        "Annex XIII"
+      ],
+      "confidence": "high",
+      "abstained": false,
+      "parse_error": false,
+      "retrieved_units": [
+        "Article 51",
+        "Recital 112",
+        "Recital 111",
+        "Annex XIII"
+      ],
+      "latency_ms": {
+        "retrieval": 594.2,
+        "generation": 10539.8,
+        "total": 11134.0
+      },
+      "raw_output": "{\"answer\": \"10^25 floating point operations\", \"cited_articles\": [\"Article 51\", \"Recital 112\", \"Recital 111\", \"Annex XIII\"], \"confidence\": \"high\"}",
+      "correct": 1.0,
+      "precision": 0.25,
+      "recall": 1.0,
+      "faithfulness": 1.0,
+      "numbers_grounded": 1.0,
+      "reference": "When the cumulative training computation is greater than 10^25 floating point operations (Art. 51(2))."
+    },
+    {
+      "id": "q05",
+      "lang": "en",
+      "answerable": true,
+      "question": "What must providers and deployers of AI systems do regarding AI literacy?",
+      "gold": [
+        "Article 4"
+      ],
+      "answer": "Providers and deployers of AI systems shall take measures to ensure, to their best extent, a sufficient level of AI literacy of their staff and other persons dealing with the operation and use of AI systems on their behalf, taking into account their technical knowledge, experience, education and training and the context the AI systems are to be used in, and considering the persons or groups of persons on whom the AI systems are to be used.",
+      "cited": [
+        "Article 4",
+        "Recital 20",
+        "Recital 165"
+      ],
+      "confidence": "high",
+      "abstained": false,
+      "parse_error": false,
+      "retrieved_units": [
+        "Article 4",
+        "Recital 20",
+        "Recital 165",
+        "Article 50"
+      ],
+      "latency_ms": {
+        "retrieval": 504.0,
+        "generation": 18724.9,
+        "total": 19228.9
+      },
+      "raw_output": "{\"answer\": \"Providers and deployers of AI systems shall take measures to ensure, to their best extent, a sufficient level of AI literacy of their staff and other persons dealing with the operation and use of AI systems on their behalf, taking into account their technical knowledge, experience, education and training and the context the AI systems are to be used in, and considering the persons or groups of persons on whom the AI systems are to be used.\", \"cited_articles\": [\"Article 4\", \"Recital 20\", \"Recital 165\"], \"confidence\": \"high\"}",
+      "correct": 1.0,
+      "precision": 0.3333333333333333,
+      "recall": 1.0,
+      "faithfulness": 1.0,
+      "numbers_grounded": 1.0,
+      "reference": "Take measures to ensure, to their best extent, a sufficient level of AI literacy of their staff and other persons operating AI systems on their behalf (Art. 4)."
+    },
+    {
+      "id": "q06",
+      "lang": "en",
+      "answerable": true,
+      "question": "Is it allowed to use an AI system to infer the emotions of employees at the workplace?",
+      "gold": [
+        "Article 5"
+      ],
+      "answer": "No",
+      "cited": [
+        "Recital 44",
+        "Article 5"
+      ],
+      "confidence": "high",
+      "abstained": false,
+      "parse_error": false,
+      "retrieved_units": [
+        "Recital 44",
+        "Article 5",
+        "Recital 18",
+        "Recital 63"
+      ],
+      "latency_ms": {
+        "retrieval": 546.6,
+        "generation": 9640.4,
+        "total": 10187.0
+      },
+      "raw_output": "{\"answer\": \"No\", \"cited_articles\": [\"Recital 44\", \"Article 5\", \"Recital 44\", \"Article 5\", \"Recital 44\"], \"confidence\": \"high\"}",
+      "correct": 1.0,
+      "precision": 0.5,
+      "recall": 1.0,
+      "faithfulness": 0.0,
+      "numbers_grounded": 1.0,
+      "reference": "No, it is prohibited, except where the AI system is intended for medical or safety reasons (Art. 5(1)(f))."
+    },
+    {
+      "id": "q07",
+      "lang": "en",
+      "answerable": true,
+      "question": "Can an AI system be used to build a facial recognition database by scraping facial images from the internet?",
+      "gold": [
+        "Article 5"
+      ],
+      "answer": "Yes",
+      "cited": [],
+      "confidence": "high",
+      "abstained": false,
+      "parse_error": false,
+      "retrieved_units": [
+        "Recital 43",
+        "Article 5",
+        "Recital 54",
+        "Article 3",
+        "Recital 18"
+      ],
+      "latency_ms": {
+        "retrieval": 528.5,
+        "generation": 5947.6,
+        "total": 6476.1
+      },
+      "raw_output": "{\"answer\": \"Yes\", \"cited_articles\": [], \"confidence\": \"high\"}",
+      "correct": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "faithfulness": 0.0,
+      "numbers_grounded": 1.0,
+      "reference": "No. AI systems that create or expand facial recognition databases through untargeted scraping of facial images from the internet or CCTV footage are prohibited (Art. 5(1)(e))."
+    },
+    {
+      "id": "q08",
+      "lang": "en",
+      "answerable": true,
+      "question": "For how long must providers keep the logs automatically generated by their high-risk AI systems?",
+      "gold": [
+        "Article 19"
+      ],
+      "answer": "six months",
+      "cited": [
+        "Article 19"
+      ],
+      "confidence": "high",
+      "abstained": false,
+      "parse_error": false,
+      "retrieved_units": [
+        "Article 19",
+        "Article 26",
+        "Article 18",
+        "Article 22",
+        "Article 23"
+      ],
+      "latency_ms": {
+        "retrieval": 559.3,
+        "generation": 7748.0,
+        "total": 8307.3
+      },
+      "raw_output": "{\"answer\": \"six months\", \"cited_articles\": [\"Article 19\"], \"confidence\": \"high\"}",
+      "correct": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "faithfulness": 1.0,
+      "numbers_grounded": 1.0,
+      "reference": "For a period appropriate to the intended purpose, of at least six months, unless Union or national law provides otherwise (Art. 19(1))."
+    },
+    {
+      "id": "q09",
+      "lang": "en",
+      "answerable": true,
+      "question": "Within how many days must a provider report a serious incident involving a high-risk AI system?",
+      "gold": [
+        "Article 73"
+      ],
+      "answer": "15 days",
+      "cited": [
+        "Article 73"
+      ],
+      "confidence": "high",
+      "abstained": false,
+      "parse_error": false,
+      "retrieved_units": [
+        "Article 73",
+        "Article 36",
+        "Article 26",
+        "Article 60"
+      ],
+      "latency_ms": {
+        "retrieval": 696.5,
+        "generation": 7166.6,
+        "total": 7863.1
+      },
+      "raw_output": "{\"answer\": \"15 days\", \"cited_articles\": [\"Article 73\"], \"confidence\": \"high\"}",
+      "correct": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "faithfulness": 1.0,
+      "numbers_grounded": 1.0,
+      "reference": "Not later than 15 days after becoming aware; 2 days for widespread infringements or critical infrastructure incidents; 10 days in case of death (Art. 73(2)-(4))."
+    },
+    {
+      "id": "q10",
+      "lang": "en",
+      "answerable": true,
+      "question": "What transparency obligation applies to AI systems such as chatbots that interact directly with people?",
+      "gold": [
+        "Article 50"
+      ],
+      "answer": "Providers shall ensure that AI systems intended to interact directly with natural persons are designed and developed in such a way that the natural persons concerned are informed that they are interacting with an AI system, unless this is obvious from the point of view of a natural person who is reasonably well-informed, observant and circumspect, taking into account the circumstances and the context of use.",
+      "cited": [
+        "Article 50",
+        "Recital 132"
+      ],
+      "confidence": "high",
+      "abstained": false,
+      "parse_error": false,
+      "retrieved_units": [
+        "Article 50",
+        "Recital 132"
+      ],
+      "latency_ms": {
+        "retrieval": 591.8,
+        "generation": 16598.2,
+        "total": 17190.1
+      },
+      "raw_output": "{\"answer\": \"Providers shall ensure that AI systems intended to interact directly with natural persons are designed and developed in such a way that the natural persons concerned are informed that they are interacting with an AI system, unless this is obvious from the point of view of a natural person who is reasonably well-informed, observant and circumspect, taking into account the circumstances and the context of use.\", \"cited_articles\": [\"Article 50\", \"Recital 132\"], \"confidence\": \"high\"}",
+      "correct": 1.0,
+      "precision": 0.5,
+      "recall": 1.0,
+      "faithfulness": 1.0,
+      "numbers_grounded": 1.0,
+      "reference": "Providers must design them so that people are informed they are interacting with an AI system, unless this is obvious (Art. 50(1))."
+    },
+    {
+      "id": "q11",
+      "lang": "en",
+      "answerable": true,
+      "question": "Does the AI Act apply to AI systems used exclusively for military, defence or national security purposes?",
+      "gold": [
+        "Article 2"
+      ],
+      "answer": "Yes",
+      "cited": [
+        "Article 2",
+        "Recital 24"
+      ],
+      "confidence": "high",
+      "abstained": false,
+      "parse_error": false,
+      "retrieved_units": [
+        "Article 2",
+        "Recital 24",
+        "Article 14"
+      ],
+      "latency_ms": {
+        "retrieval": 545.5,
+        "generation": 7620.7,
+        "total": 8166.2
+      },
+      "raw_output": "{\"answer\": \"Yes\", \"cited_articles\": [\"Article 2\", \"Recital 24\"], \"confidence\": \"high\"}",
+      "correct": 1.0,
+      "precision": 0.5,
+      "recall": 1.0,
+      "faithfulness": 0.0,
+      "numbers_grounded": 1.0,
+      "reference": "No, such AI systems are excluded from its scope (Art. 2(3))."
+    },
+    {
+      "id": "q12",
+      "lang": "en",
+      "answerable": true,
+      "question": "Does the Regulation apply to AI systems developed and put into service for the sole purpose of scientific research and development?",
+      "gold": [
+        "Article 2"
+      ],
+      "answer": "Yes",
+      "cited": [
+        "Recital 25"
+      ],
+      "confidence": "high",
+      "abstained": false,
+      "parse_error": false,
+      "retrieved_units": [
+        "Recital 25",
+        "Article 2",
+        "Recital 97",
+        "Recital 1"
+      ],
+      "latency_ms": {
+        "retrieval": 548.5,
+        "generation": 6576.6,
+        "total": 7125.1
+      },
+      "raw_output": "{\"answer\": \"Yes\", \"cited_articles\": [\"Recital 25\"], \"confidence\": \"high\"}",
+      "correct": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "faithfulness": 0.0,
+      "numbers_grounded": 1.0,
+      "reference": "No (Art. 2(6))."
+    },
+    {
+      "id": "q13",
+      "lang": "en",
+      "answerable": true,
+      "question": "How does the AI Act define an 'AI system'?",
+      "gold": [
+        "Article 3"
+      ],
+      "answer": "An AI system is a machine-based system that is designed to operate with varying levels of autonomy and that may exhibit adaptiveness after deployment, and that, for explicit or implicit objectives, infers, from the input it receives, how to generate outputs such as predictions, content, recommendations, or decisions that can influence physical or virtual environments.",
+      "cited": [],
+      "confidence": "high",
+      "abstained": false,
+      "parse_error": false,
+      "retrieved_units": [
+        "Recital 12",
+        "Article 3",
+        "Recital 155",
+        "Annex III"
+      ],
+      "latency_ms": {
+        "retrieval": 518.0,
+        "generation": 13696.4,
+        "total": 14214.5
+      },
+      "raw_output": "{\"answer\": \"An AI system is a machine-based system that is designed to operate with varying levels of autonomy and that may exhibit adaptiveness after deployment, and that, for explicit or implicit objectives, infers, from the input it receives, how to generate outputs such as predictions, content, recommendations, or decisions that can influence physical or virtual environments.\", \"cited_articles\": [], \"confidence\": \"high\"}",
+      "correct": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "faithfulness": 0.0,
+      "numbers_grounded": 1.0,
+      "reference": "A machine-based system designed to operate with varying levels of autonomy, that may exhibit adaptiveness after deployment and that infers from the input it receives how to generate outputs such as predictions, content, recommendations or decisions that can influence physical or virtual environments (Art. 3(1))."
+    },
+    {
+      "id": "q14",
+      "lang": "en",
+      "answerable": true,
+      "question": "Which areas are listed as high-risk in Annex III?",
+      "gold": [
+        "Annex III"
+      ],
+      "answer": "Biometrics, critical infrastructure, and areas of law enforcement, migration, asylum, and border control management",
+      "cited": [],
+      "confidence": "high",
+      "abstained": false,
+      "parse_error": false,
+      "retrieved_units": [
+        "Article 7",
+        "Annex III",
+        "Article 49",
+        "Article 60"
+      ],
+      "latency_ms": {
+        "retrieval": 551.1,
+        "generation": 8601.5,
+        "total": 9152.6
+      },
+      "raw_output": "{\"answer\": \"Biometrics, critical infrastructure, and areas of law enforcement, migration, asylum, and border control management\", \"cited_articles\": [], \"confidence\": \"high\"}",
+      "correct": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "faithfulness": 0.0,
+      "numbers_grounded": 1.0,
+      "reference": "Biometrics; critical infrastructure; education and vocational training; employment; access to essential private and public services; law enforcement; migration, asylum and border control; administration of justice and democratic processes (Annex III)."
+    },
+    {
+      "id": "q15",
+      "lang": "en",
+      "answerable": true,
+      "question": "Is an AI system used to evaluate the creditworthiness of natural persons considered high-risk?",
+      "gold": [
+        "Annex III"
+      ],
+      "answer": "Yes",
+      "cited": [
+        "Recital 58"
+      ],
+      "confidence": "high",
+      "abstained": false,
+      "parse_error": false,
+      "retrieved_units": [
+        "Recital 58",
+        "Annex III",
+        "Article 6",
+        "Recital 132"
+      ],
+      "latency_ms": {
+        "retrieval": 459.6,
+        "generation": 6923.3,
+        "total": 7382.9
+      },
+      "raw_output": "{\"answer\": \"Yes\", \"cited_articles\": [\"Recital 58\"], \"confidence\": \"high\"}",
+      "correct": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "faithfulness": 0.0,
+      "numbers_grounded": 1.0,
+      "reference": "Yes, except AI systems used to detect financial fraud (Annex III, point 5(b))."
+    },
+    {
+      "id": "q16",
+      "lang": "en",
+      "answerable": true,
+      "question": "What information must the technical documentation of a high-risk AI system contain?",
+      "gold": [
+        "Annex IV",
+        "Article 11"
+      ],
+      "answer": "The technical documentation shall be drawn up in such a way as to demonstrate that the high-risk AI system complies with the requirements set out in this Section and to provide national competent authorities and notified bodies with the necessary information in a clear and comprehensive form to assess the compliance of the AI system with those requirements. It shall contain, at a minimum, the elements set out in Annex IV.",
+      "cited": [
+        "Article 11",
+        "Article 13"
+      ],
+      "confidence": "high",
+      "abstained": false,
+      "parse_error": false,
+      "retrieved_units": [
+        "Recital 71",
+        "Article 11",
+        "Article 13",
+        "Recital 66"
+      ],
+      "latency_ms": {
+        "retrieval": 519.2,
+        "generation": 16488.2,
+        "total": 17007.4
+      },
+      "raw_output": "{\"answer\": \"The technical documentation shall be drawn up in such a way as to demonstrate that the high-risk AI system complies with the requirements set out in this Section and to provide national competent authorities and notified bodies with the necessary information in a clear and comprehensive form to assess the compliance of the AI system with those requirements. It shall contain, at a minimum, the elements set out in Annex IV.\", \"cited_articles\": [\"Article 11\", \"Article 13\"], \"confidence\": \"high\"}",
+      "correct": 1.0,
+      "precision": 0.5,
+      "recall": 0.5,
+      "faithfulness": 1.0,
+      "numbers_grounded": 1.0,
+      "reference": "At least the elements of Annex IV: general description, detailed description of elements and development process, monitoring/functioning/control, performance metrics, risk management system, changes, standards applied, EU declaration of conformity, post-market monitoring plan."
+    },
+    {
+      "id": "q17",
+      "lang": "en",
+      "answerable": true,
+      "question": "What are the human oversight requirements for high-risk AI systems?",
+      "gold": [
+        "Article 14"
+      ],
+      "answer": "Not stated in the text of the AI Act (Regulation (EU) 2024/1689).",
+      "cited": [],
+      "confidence": "low",
+      "abstained": true,
+      "parse_error": true,
+      "retrieved_units": [
+        "Article 14"
+      ],
+      "latency_ms": {
+        "retrieval": 628.4,
+        "generation": 51450.0,
+        "total": 52078.4
+      },
+      "raw_output": "{\"answer\": \"The human oversight requirements for high-risk AI systems include the following:\\n1. The high-risk AI system shall be designed and developed in such a way that it can be effectively overseen by natural persons during its use.\\n2. The oversight measures shall be commensurate with the risks, level of autonomy, and context of use of the high-risk AI system, and shall be ensured through either one or both of the following types of measures:\\n(a) measures identified and built into the high-risk AI system by the provider before it is placed on the market or put into service.\\n(b) measures identified by the provider before placing the high-risk AI system on the market or putting it into service and that are appropriate to be implemented by the deployer.\\n3. The deployer shall be provided with the high-risk AI system in such a way that natural persons to whom human oversight is assigned are enabled, as appropriate and proportionate:\\n(a) to properly understand the relevant capacities and limitations of the high-risk AI system and be able to duly monitor its operation, including in view of detecting and addressing anomalies, dysfunctions, and unexpected performance.\\n(b) to remain aware of the possible tendency of automatically relying or over-relying on the output produced by a high-risk AI system (automation bias), in particular for high-risk AI systems used to provide information or recommendations for decisions to be taken by natural persons.\\n(c) to correctly interpret the high-risk AI system’s output, taking into account, for example, the interpretation tools and methods available.\\n4. For high-risk AI systems referred to in point 1(a) of Annex III, the measures referred to in paragraph 3 of this Article shall be such as to ensure that, in addition, no action or decision is taken by the deployer on the basis of the identification resulting from the system unless that identification has been",
+      "reference": "They must be designed so that they can be effectively overseen by natural persons during use, with measures enabling overseers to understand, monitor, interpret, override or stop the system (Art. 14)."
+    },
+    {
+      "id": "q18",
+      "lang": "en",
+      "answerable": true,
+      "question": "What quality criteria must training, validation and testing data sets of high-risk AI systems meet?",
+      "gold": [
+        "Article 10"
+      ],
+      "answer": "The training, validation and testing data sets must meet the following quality criteria: relevant, sufficiently representative, free of errors, complete, and appropriate for the intended purpose.",
+      "cited": [
+        "Article 10",
+        "Recital 67",
+        "Recital 68"
+      ],
+      "confidence": "high",
+      "abstained": false,
+      "parse_error": false,
+      "retrieved_units": [
+        "Article 10",
+        "Recital 67",
+        "Recital 68"
+      ],
+      "latency_ms": {
+        "retrieval": 547.8,
+        "generation": 13033.6,
+        "total": 13581.4
+      },
+      "raw_output": "{\"answer\": \"The training, validation and testing data sets must meet the following quality criteria: relevant, sufficiently representative, free of errors, complete, and appropriate for the intended purpose.\", \"cited_articles\": [\"Article 10\", \"Recital 67\", \"Article 10\", \"Recital 68\"], \"confidence\": \"high\"}",
+      "correct": 1.0,
+      "precision": 0.3333333333333333,
+      "recall": 1.0,
+      "faithfulness": 1.0,
+      "numbers_grounded": 1.0,
+      "reference": "They must be subject to data governance practices and be relevant, sufficiently representative and, to the best extent possible, free of errors and complete in view of the intended purpose (Art. 10)."
+    },
+    {
+      "id": "q19",
+      "lang": "en",
+      "answerable": true,
+      "question": "Which deployers must carry out a fundamental rights impact assessment before deploying a high-risk AI system?",
+      "gold": [
+        "Article 27"
+      ],
+      "answer": "Deployers governed by public law or providing public services, and deployers of high-risk AI systems listed in an annex to the Regulation",
+      "cited": [
+        "Recital 96"
+      ],
+      "confidence": "high",
+      "abstained": false,
+      "parse_error": false,
+      "retrieved_units": [
+        "Recital 96",
+        "Article 27"
+      ],
+      "latency_ms": {
+        "retrieval": 534.0,
+        "generation": 10928.8,
+        "total": 11462.8
+      },
+      "raw_output": "{\"answer\": \"Deployers governed by public law or providing public services, and deployers of high-risk AI systems listed in an annex to the Regulation\", \"cited_articles\": [\"Recital 96\"], \"confidence\": \"high\"}",
+      "correct": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "faithfulness": 1.0,
+      "numbers_grounded": 1.0,
+      "reference": "Bodies governed by public law, private entities providing public services, and deployers of systems in points 5(b) and (c) of Annex III (credit scoring, life and health insurance) (Art. 27(1))."
+    },
+    {
+      "id": "q20",
+      "lang": "en",
+      "answerable": true,
+      "question": "Do people affected by a decision based on a high-risk AI system have a right to an explanation?",
+      "gold": [
+        "Article 86"
+      ],
+      "answer": "Yes",
+      "cited": [
+        "Recital 171",
+        "Article 86",
+        "Recital 93",
+        "Recital 61"
+      ],
+      "confidence": "high",
+      "abstained": false,
+      "parse_error": false,
+      "retrieved_units": [
+        "Recital 171",
+        "Article 86",
+        "Recital 93",
+        "Recital 61"
+      ],
+      "latency_ms": {
+        "retrieval": 584.0,
+        "generation": 8913.3,
+        "total": 9497.3
+      },
+      "raw_output": "{\"answer\": \"Yes\", \"cited_articles\": [\"Recital 171\", \"Article 86\", \"Recital 93\", \"Recital 61\"], \"confidence\": \"high\"}",
+      "correct": 1.0,
+      "precision": 0.25,
+      "recall": 1.0,
+      "faithfulness": 0.0,
+      "numbers_grounded": 1.0,
+      "reference": "Yes, they can obtain from the deployer clear and meaningful explanations of the role of the AI system in the decision-making procedure and the main elements of the decision (Art. 86(1))."
+    },
+    {
+      "id": "q21",
+      "lang": "en",
+      "answerable": true,
+      "question": "By when must Member States have at least one AI regulatory sandbox operational?",
+      "gold": [
+        "Article 57"
+      ],
+      "answer": "2 August 2026",
+      "cited": [
+        "Article 57",
+        "Recital 138"
+      ],
+      "confidence": "high",
+      "abstained": false,
+      "parse_error": false,
+      "retrieved_units": [
+        "Article 57",
+        "Recital 138",
+        "Recital 143",
+        "Article 62"
+      ],
+      "latency_ms": {
+        "retrieval": 540.6,
+        "generation": 8484.8,
+        "total": 9025.4
+      },
+      "raw_output": "{\"answer\": \"2 August 2026\", \"cited_articles\": [\"Article 57\", \"Recital 138\"], \"confidence\": \"high\"}",
+      "correct": 1.0,
+      "precision": 0.5,
+      "recall": 1.0,
+      "faithfulness": 1.0,
+      "numbers_grounded": 1.0,
+      "reference": "By 2 August 2026 (Art. 57(1))."
+    },
+    {
+      "id": "q22",
+      "lang": "en",
+      "answerable": true,
+      "question": "What obligations do providers of general-purpose AI models have regarding copyright?",
+      "gold": [
+        "Article 53"
+      ],
+      "answer": "Providers of general-purpose AI models should ensure compliance with the relevant obligations in this Regulation. To that end, providers of general-purpose AI models should put in place a policy to comply with Union law on copyright and related rights, in particular to identify and comply with the reservation of rights expressed by rightsholders pursuant to Article 4(3) of Directive (EU) 2019/790. Any provider placing a general-purpose AI model on the Union market should comply with this obligation, regardless of the jurisdiction in which the copyright-relevant acts underpinning the training of those general-purpose AI models take place. This is necessary to ensure a level playing field among providers of general-purpose AI models where no provider should be able to gain a competitive advantage in the Union market by applying lower copyright standards than those provided in the Union.",
+      "cited": [
+        "Article 53",
+        "Recital 106",
+        "Recital 108",
+        "Recital 109",
+        "Recital 104"
+      ],
+      "confidence": "high",
+      "abstained": false,
+      "parse_error": false,
+      "retrieved_units": [
+        "Article 53",
+        "Recital 106",
+        "Recital 108",
+        "Recital 109",
+        "Recital 104"
+      ],
+      "latency_ms": {
+        "retrieval": 520.8,
+        "generation": 31259.6,
+        "total": 31780.4
+      },
+      "raw_output": "{\"answer\": \"Providers of general-purpose AI models should ensure compliance with the relevant obligations in this Regulation. To that end, providers of general-purpose AI models should put in place a policy to comply with Union law on copyright and related rights, in particular to identify and comply with the reservation of rights expressed by rightsholders pursuant to Article 4(3) of Directive (EU) 2019/790. Any provider placing a general-purpose AI model on the Union market should comply with this obligation, regardless of the jurisdiction in which the copyright-relevant acts underpinning the training of those general-purpose AI models take place. This is necessary to ensure a level playing field among providers of general-purpose AI models where no provider should be able to gain a competitive advantage in the Union market by applying lower copyright standards than those provided in the Union.\", \"cited_articles\": [\"Article 53\", \"Recital 106\", \"Recital 108\", \"Recital 109\", \"Recital 104\"], \"confidence\": \"high\"}",
+      "correct": 1.0,
+      "precision": 0.2,
+      "recall": 1.0,
+      "faithfulness": 1.0,
+      "numbers_grounded": 1.0,
+      "reference": "Put in place a policy to comply with Union copyright law, including reservations of rights, and publish a sufficiently detailed summary of the content used for training (Art. 53(1)(c)-(d))."
+    },
+    {
+      "id": "q23",
+      "lang": "en",
+      "answerable": true,
+      "question": "What additional obligations apply to providers of general-purpose AI models with systemic risk?",
+      "gold": [
+        "Article 55"
+      ],
+      "answer": "In addition to the obligations listed in Articles 53 and 54, providers of general-purpose AI models with systemic risk shall perform model evaluation in accordance with standardised protocols and tools reflecting the state of the art, including conducting and documenting adversarial testing of the model with a view to identifying and mitigating systemic risks; assess and mitigate possible systemic risks at Union level, including their sources, that may stem from the development, the placing on the market, or the use of general-purpose AI models with systemic risk; keep track of, document, and report, without undue delay, to the AI Office and, as appropriate, to national competent authorities, relevant information about serious incidents and possible corrective measures to address them; ensure an adequate level of cybersecurity protection for the general-purpose AI model with systemic risk and the physical infrastructure of the model.",
+      "cited": [
+        "Article 55",
+        "Recital 114",
+        "Article 53",
+        "Recital 97"
+      ],
+      "confidence": "high",
+      "abstained": false,
+      "parse_error": false,
+      "retrieved_units": [
+        "Article 55",
+        "Recital 114",
+        "Article 53",
+        "Recital 97"
+      ],
+      "latency_ms": {
+        "retrieval": 573.6,
+        "generation": 31046.7,
+        "total": 31620.3
+      },
+      "raw_output": "{\"answer\": \"In addition to the obligations listed in Articles 53 and 54, providers of general-purpose AI models with systemic risk shall perform model evaluation in accordance with standardised protocols and tools reflecting the state of the art, including conducting and documenting adversarial testing of the model with a view to identifying and mitigating systemic risks; assess and mitigate possible systemic risks at Union level, including their sources, that may stem from the development, the placing on the market, or the use of general-purpose AI models with systemic risk; keep track of, document, and report, without undue delay, to the AI Office and, as appropriate, to national competent authorities, relevant information about serious incidents and possible corrective measures to address them; ensure an adequate level of cybersecurity protection for the general-purpose AI model with systemic risk and the physical infrastructure of the model.\", \"cited_articles\": [\"Article 55\", \"Recital 114\", \"Article 53\", \"Recital 97\"], \"confidence\": \"high\"}",
+      "correct": 1.0,
+      "precision": 0.25,
+      "recall": 1.0,
+      "faithfulness": 1.0,
+      "numbers_grounded": 1.0,
+      "reference": "Perform model evaluations including adversarial testing, assess and mitigate systemic risks, track and report serious incidents, and ensure adequate cybersecurity protection (Art. 55(1))."
+    },
+    {
+      "id": "q24",
+      "lang": "en",
+      "answerable": true,
+      "question": "What fines can the Commission impose on providers of general-purpose AI models?",
+      "gold": [
+        "Article 101"
+      ],
+      "answer": "The Commission may impose fines not exceeding 3% of their annual total worldwide turnover in the preceding financial year or EUR 15,000,000, whichever is higher, when the Commission finds that the provider intentionally or negligently infringes the relevant provisions of this Regulation, fails to comply with a request for a document or for information pursuant to Article 91, supplies incorrect, incomplete or misleading information, fails to comply with a measure requested under Article 93, or fails to make available to the Commission access to the general-purpose AI model or general-purpose AI model with systemic risk with a view to conducting an evaluation pursuant to Article 92.",
+      "cited": [
+        "Article 101"
+      ],
+      "confidence": "high",
+      "abstained": false,
+      "parse_error": false,
+      "retrieved_units": [
+        "Article 101",
+        "Recital 169",
+        "Article 92"
+      ],
+      "latency_ms": {
+        "retrieval": 525.0,
+        "generation": 27157.3,
+        "total": 27682.3
+      },
+      "raw_output": "{\"answer\": \"The Commission may impose fines not exceeding 3% of their annual total worldwide turnover in the preceding financial year or EUR 15,000,000, whichever is higher, when the Commission finds that the provider intentionally or negligently infringes the relevant provisions of this Regulation, fails to comply with a request for a document or for information pursuant to Article 91, supplies incorrect, incomplete or misleading information, fails to comply with a measure requested under Article 93, or fails to make available to the Commission access to the general-purpose AI model or general-purpose AI model with systemic risk with a view to conducting an evaluation pursuant to Article 92.\", \"cited_articles\": [\"Article 101\", \"Article 101\", \"Article 101\", \"Article 101\", \"Article 101\"], \"confidence\": \"high\"}",
+      "correct": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "faithfulness": 1.0,
+      "numbers_grounded": 1.0,
+      "reference": "Fines not exceeding 3 % of annual total worldwide turnover or EUR 15 000 000, whichever is higher (Art. 101(1))."
+    },
+    {
+      "id": "q25",
+      "lang": "en",
+      "answerable": true,
+      "question": "What is the maximum fine for a Union institution that engages in a prohibited AI practice?",
+      "gold": [
+        "Article 100"
+      ],
+      "answer": "EUR 1 500 000",
+      "cited": [
+        "Article 100"
+      ],
+      "confidence": "high",
+      "abstained": false,
+      "parse_error": false,
+      "retrieved_units": [
+        "Article 100",
+        "Article 99",
+        "Article 5"
+      ],
+      "latency_ms": {
+        "retrieval": 500.8,
+        "generation": 7897.4,
+        "total": 8398.1
+      },
+      "raw_output": "{\"answer\": \"EUR 1 500 000\", \"cited_articles\": [\"Article 100\"], \"confidence\": \"high\"}",
+      "correct": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "faithfulness": 1.0,
+      "numbers_grounded": 1.0,
+      "reference": "Up to EUR 1 500 000 (Art. 100(2))."
+    },
+    {
+      "id": "q26",
+      "lang": "en",
+      "answerable": true,
+      "question": "Why does the Regulation prohibit AI-enabled manipulative techniques?",
+      "gold": [
+        "Recital 29"
+      ],
+      "answer": "The Regulation prohibits AI-enabled manipulative techniques because they can be used to persuade persons to engage in unwanted behaviors or deceive them by nudging them into decisions that subvert and impair their autonomy, decision-making, and free choices. These techniques can cause significant harm, particularly to physical, psychological health, or financial interests, and should be prohibited.",
+      "cited": [
+        "Recital 29"
+      ],
+      "confidence": "high",
+      "abstained": false,
+      "parse_error": false,
+      "retrieved_units": [
+        "Recital 29",
+        "Article 5",
+        "Recital 28"
+      ],
+      "latency_ms": {
+        "retrieval": 526.2,
+        "generation": 14581.7,
+        "total": 15108.0
+      },
+      "raw_output": "{\"answer\": \"The Regulation prohibits AI-enabled manipulative techniques because they can be used to persuade persons to engage in unwanted behaviors or deceive them by nudging them into decisions that subvert and impair their autonomy, decision-making, and free choices. These techniques can cause significant harm, particularly to physical, psychological health, or financial interests, and should be prohibited.\", \"cited_articles\": [\"Recital 29\"], \"confidence\": \"high\"}",
+      "correct": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "faithfulness": 1.0,
+      "numbers_grounded": 1.0,
+      "reference": "Because they can persuade people into unwanted behaviours or deceive them, subverting and impairing their autonomy, decision-making and free choice (Recital 29)."
+    },
+    {
+      "id": "q27",
+      "lang": "en",
+      "answerable": true,
+      "question": "Which criteria does the Commission take into account to designate a general-purpose AI model as having systemic risk?",
+      "gold": [
+        "Annex XIII"
+      ],
+      "answer": "The Commission takes into account the following criteria: the number of parameters of the model, the quality or size of the data set, the amount of computation used for training the model, the input and output modalities of the model, and the state of the art thresholds for determining high-impact capabilities for each modality.",
+      "cited": [
+        "Annex XIII",
+        "Article 52"
+      ],
+      "confidence": "high",
+      "abstained": false,
+      "parse_error": false,
+      "retrieved_units": [
+        "Annex XIII",
+        "Article 52",
+        "Recital 111",
+        "Recital 113"
+      ],
+      "latency_ms": {
+        "retrieval": 598.3,
+        "generation": 17357.1,
+        "total": 17955.3
+      },
+      "raw_output": "{\"answer\": \"The Commission takes into account the following criteria: the number of parameters of the model, the quality or size of the data set, the amount of computation used for training the model, the input and output modalities of the model, and the state of the art thresholds for determining high-impact capabilities for each modality.\", \"cited_articles\": [\"Annex XIII\", \"Article 52\", \"Article 52\", \"Article 52\", \"Article 52\"], \"confidence\": \"high\"}",
+      "correct": 1.0,
+      "precision": 0.5,
+      "recall": 1.0,
+      "faithfulness": 1.0,
+      "numbers_grounded": 1.0,
+      "reference": "Number of parameters, quality or size of the data set, training compute, input/output modalities, benchmarks and evaluations of capabilities, impact on the internal market due to reach (e.g. 10 000 registered business users), number of registered end-users (Annex XIII)."
+    },
+    {
+      "id": "q28",
+      "lang": "es",
+      "answerable": true,
+      "question": "¿Qué multas se aplican por incumplir la prohibición de las prácticas de IA del artículo 5?",
+      "gold": [
+        "Article 99"
+      ],
+      "answer": "Administrative fines of up to EUR 35 000 000 or, if the offender is an undertaking, up to 7 % of its total worldwide annual turnover for the preceding financial year, whichever is higher.",
+      "cited": [
+        "Article 99",
+        "Article 100"
+      ],
+      "confidence": "high",
+      "abstained": false,
+      "parse_error": false,
+      "retrieved_units": [
+        "Article 99",
+        "Article 100",
+        "Article 5"
+      ],
+      "latency_ms": {
+        "retrieval": 2467.0,
+        "generation": 13786.6,
+        "total": 16253.5
+      },
+      "raw_output": "{\"answer\": \"Administrative fines of up to EUR 35 000 000 or, if the offender is an undertaking, up to 7 % of its total worldwide annual turnover for the preceding financial year, whichever is higher.\", \"cited_articles\": [\"Article 99\", \"Article 100\"], \"confidence\": \"high\"}",
+      "correct": 1.0,
+      "precision": 0.5,
+      "recall": 1.0,
+      "faithfulness": 1.0,
+      "numbers_grounded": 1.0,
+      "reference": "Multas de hasta 35 000 000 EUR o, si el infractor es una empresa, hasta el 7 % del volumen de negocios mundial anual, si esta cuantía es superior (art. 99.3)."
+    },
+    {
+      "id": "q29",
+      "lang": "es",
+      "answerable": true,
+      "question": "¿A partir de qué fecha se aplica con carácter general el Reglamento de IA?",
+      "gold": [
+        "Article 113",
+        "Recital 179"
+      ],
+      "answer": "2 de febrero de 2025",
+      "cited": [
+        "Recital 179",
+        "Article 111",
+        "Recital 97",
+        "Recital 164",
+        "Article 2"
+      ],
+      "confidence": "high",
+      "abstained": false,
+      "parse_error": false,
+      "retrieved_units": [
+        "Recital 179",
+        "Article 111",
+        "Recital 97",
+        "Recital 164",
+        "Article 2"
+      ],
+      "latency_ms": {
+        "retrieval": 1781.2,
+        "generation": 12184.5,
+        "total": 13965.7
+      },
+      "raw_output": "{\"answer\": \"2 de febrero de 2025\", \"cited_articles\": [\"Recital 179\", \"Article 111\", \"Recital 97\", \"Recital 164\", \"Article 2\"], \"confidence\": \"high\"}",
+      "correct": 1.0,
+      "precision": 0.2,
+      "recall": 0.5,
+      "faithfulness": 0.0,
+      "numbers_grounded": 1.0,
+      "reference": "A partir del 2 de agosto de 2026 (art. 113)."
+    },
+    {
+      "id": "q30",
+      "lang": "es",
+      "answerable": true,
+      "question": "¿Está permitido usar sistemas de IA para inferir las emociones de los trabajadores en el lugar de trabajo?",
+      "gold": [
+        "Article 5"
+      ],
+      "answer": "No, la IA no está permitida para inferir emociones de los trabajadores en el lugar de trabajo",
+      "cited": [
+        "Article 5",
+        "Recital 44",
+        "Recital 18",
+        "Recital 92"
+      ],
+      "confidence": "high",
+      "abstained": false,
+      "parse_error": false,
+      "retrieved_units": [
+        "Article 5",
+        "Recital 44",
+        "Recital 18",
+        "Recital 92"
+      ],
+      "latency_ms": {
+        "retrieval": 2524.3,
+        "generation": 13113.3,
+        "total": 15637.5
+      },
+      "raw_output": "{\"answer\": \"No, la IA no está permitida para inferir emociones de los trabajadores en el lugar de trabajo\", \"cited_articles\": [\"Article 5\", \"Recital 44\", \"Recital 18\", \"Recital 92\"], \"confidence\": \"high\"}",
+      "correct": 1.0,
+      "precision": 0.25,
+      "recall": 1.0,
+      "faithfulness": 0.0,
+      "numbers_grounded": 1.0,
+      "reference": "No, está prohibido salvo por motivos médicos o de seguridad (art. 5.1.f)."
+    },
+    {
+      "id": "q31",
+      "lang": "es",
+      "answerable": true,
+      "question": "¿Qué obligación tienen los proveedores de sistemas de IA que generan contenido sintético de audio, imagen, vídeo o texto?",
+      "gold": [
+        "Article 50"
+      ],
+      "answer": "Los proveedores de sistemas de IA que generan contenido sintético de audio, imagen, vídeo o texto deben asegurarse de que los outputs de los sistemas de IA sean marcados de manera mecánicamente legible y detectable como artificialmente generado o manipulado.",
+      "cited": [
+        "Article 50"
+      ],
+      "confidence": "high",
+      "abstained": false,
+      "parse_error": false,
+      "retrieved_units": [
+        "Article 50",
+        "Recital 134",
+        "Article 16"
+      ],
+      "latency_ms": {
+        "retrieval": 3261.7,
+        "generation": 15001.7,
+        "total": 18263.5
+      },
+      "raw_output": "{\"answer\": \"Los proveedores de sistemas de IA que generan contenido sintético de audio, imagen, vídeo o texto deben asegurarse de que los outputs de los sistemas de IA sean marcados de manera mecánicamente legible y detectable como artificialmente generado o manipulado.\", \"cited_articles\": [\"Article 50\"], \"confidence\": \"high\"}",
+      "correct": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "faithfulness": 0.0,
+      "numbers_grounded": 1.0,
+      "reference": "Garantizar que los resultados estén marcados en un formato legible por máquina y sean detectables como generados o manipulados artificialmente (art. 50.2)."
+    },
+    {
+      "id": "q32",
+      "lang": "es",
+      "answerable": true,
+      "question": "¿Qué sistemas de IA del ámbito del empleo se consideran de alto riesgo?",
+      "gold": [
+        "Annex III"
+      ],
+      "answer": "Los sistemas de IA utilizados en el ámbito del empleo, la gestión de los trabajadores y el acceso a la self-employment, en particular para la recopilación y selección de personas, para tomar decisiones que afectan a las relaciones laborales, la promoción o la terminación de las relaciones laborales, para asignar tareas basadas en el comportamiento individual o las características o las características o las características de las personas en esas relaciones laborales, y para vigilar o evaluar las personas en las relaciones laborales, se clasifican como sistemas de IA de alto riesgo.",
+      "cited": [
+        "Recital 57",
+        "Article 6",
+        "Recital 51",
+        "Article 2"
+      ],
+      "confidence": "high",
+      "abstained": false,
+      "parse_error": false,
+      "retrieved_units": [
+        "Annex III",
+        "Recital 57",
+        "Article 6",
+        "Recital 51",
+        "Article 2"
+      ],
+      "latency_ms": {
+        "retrieval": 1967.9,
+        "generation": 24231.0,
+        "total": 26198.9
+      },
+      "raw_output": "{\"answer\": \"Los sistemas de IA utilizados en el ámbito del empleo, la gestión de los trabajadores y el acceso a la self-employment, en particular para la recopilación y selección de personas, para tomar decisiones que afectan a las relaciones laborales, la promoción o la terminación de las relaciones laborales, para asignar tareas basadas en el comportamiento individual o las características o las características o las características de las personas en esas relaciones laborales, y para vigilar o evaluar las personas en las relaciones laborales, se clasifican como sistemas de IA de alto riesgo.\", \"cited_articles\": [\"Recital 57\", \"Article 6\", \"Recital 51\", \"Article 2\"], \"confidence\": \"high\"}",
+      "correct": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "faithfulness": 0.0,
+      "numbers_grounded": 1.0,
+      "reference": "Los destinados a la contratación o selección de personas (anuncios, filtrado de solicitudes, evaluación de candidatos) y a tomar decisiones sobre condiciones laborales, promoción, despido, asignación de tareas o supervisión del rendimiento (anexo III, punto 4)."
+    },
+    {
+      "id": "q33",
+      "lang": "en",
+      "answerable": false,
+      "question": "What is the corporate income tax rate that applies to AI companies in the EU?",
+      "gold": [],
+      "answer": "7%",
+      "cited": [
+        "Article 100"
+      ],
+      "confidence": "high",
+      "abstained": false,
+      "parse_error": false,
+      "retrieved_units": [
+        "Article 99",
+        "Article 100",
+        "Article 74",
+        "Article 101",
+        "Recital 51"
+      ],
+      "latency_ms": {
+        "retrieval": 473.9,
+        "generation": 6902.4,
+        "total": 7376.3
+      },
+      "raw_output": "{\"answer\": \"7%\", \"cited_articles\": [\"Article 100\"], \"confidence\": \"high\"}",
+      "reference": null
+    },
+    {
+      "id": "q34",
+      "lang": "en",
+      "answerable": false,
+      "question": "What is the maximum fine for infringements of the GDPR?",
+      "gold": [],
+      "answer": "EUR 35 000 000 or, if the offender is an undertaking, up to 7 % of its total worldwide annual turnover for the preceding financial year, whichever is higher.",
+      "cited": [
+        "Article 99",
+        "Recital 168"
+      ],
+      "confidence": "high",
+      "abstained": false,
+      "parse_error": false,
+      "retrieved_units": [
+        "Article 100",
+        "Article 99",
+        "Recital 168"
+      ],
+      "latency_ms": {
+        "retrieval": 553.3,
+        "generation": 13055.0,
+        "total": 13608.3
+      },
+      "raw_output": "{\"answer\": \"EUR 35 000 000 or, if the offender is an undertaking, up to 7 % of its total worldwide annual turnover for the preceding financial year, whichever is higher.\", \"cited_articles\": [\"Article 99\", \"Recital 168\"], \"confidence\": \"high\"}",
+      "reference": null
+    },
+    {
+      "id": "q35",
+      "lang": "en",
+      "answerable": false,
+      "question": "How many employees does the AI Office have?",
+      "gold": [],
+      "answer": "The AI Office has no specific number of employees mentioned in the provided context.",
+      "cited": [
+        "Article 64",
+        "Article 3",
+        "Article 65"
+      ],
+      "confidence": "high",
+      "abstained": false,
+      "parse_error": false,
+      "retrieved_units": [
+        "Article 64",
+        "Article 3",
+        "Article 65",
+        "Recital 96"
+      ],
+      "latency_ms": {
+        "retrieval": 524.4,
+        "generation": 8180.7,
+        "total": 8705.1
+      },
+      "raw_output": "{\"answer\": \"The AI Office has no specific number of employees mentioned in the provided context.\", \"cited_articles\": [\"Article 64\", \"Article 3\", \"Article 65\"], \"confidence\": \"high\"}",
+      "reference": null
+    },
+    {
+      "id": "q36",
+      "lang": "en",
+      "answerable": false,
+      "question": "What is the annual budget in euros allocated to each national AI regulatory sandbox?",
+      "gold": [],
+      "answer": "Not stated in the text of the AI Act (Regulation (EU) 2024/1689).",
+      "cited": [],
+      "confidence": "low",
+      "abstained": true,
+      "parse_error": false,
+      "retrieved_units": [
+        "Article 57",
+        "Article 58",
+        "Recital 138"
+      ],
+      "latency_ms": {
+        "retrieval": 650.1,
+        "generation": 7560.8,
+        "total": 8211.0
+      },
+      "raw_output": "{\"answer\": \"Not specified\", \"cited_articles\": [\"Article 57\", \"Article 58\"], \"confidence\": \"low\"}",
+      "reference": null
+    },
+    {
+      "id": "q37",
+      "lang": "en",
+      "answerable": false,
+      "question": "Which company trained the first general-purpose AI model designated as having systemic risk?",
+      "gold": [],
+      "answer": "Google",
+      "cited": [
+        "Recital 111"
+      ],
+      "confidence": "high",
+      "abstained": false,
+      "parse_error": false,
+      "retrieved_units": [
+        "Recital 112",
+        "Article 51",
+        "Article 52",
+        "Recital 111"
+      ],
+      "latency_ms": {
+        "retrieval": 572.1,
+        "generation": 7022.3,
+        "total": 7594.4
+      },
+      "raw_output": "{\"answer\": \"Google\", \"cited_articles\": [\"Recital 111\"], \"confidence\": \"high\"}",
+      "reference": null
+    },
+    {
+      "id": "q38",
+      "lang": "es",
+      "answerable": false,
+      "question": "¿Cuál es el salario mínimo que el Reglamento fija para los ingenieros de IA?",
+      "gold": [],
+      "answer": "No consta en el texto del Reglamento de IA (Reglamento (UE) 2024/1689).",
+      "cited": [],
+      "confidence": "low",
+      "abstained": true,
+      "parse_error": false,
+      "retrieved_units": [
+        "Recital 177",
+        "Article 2",
+        "Recital 164",
+        "Article 53",
+        "Article 62"
+      ],
+      "latency_ms": {
+        "retrieval": 2371.0,
+        "generation": 7846.2,
+        "total": 10217.2
+      },
+      "raw_output": "{\"answer\": \"No se proporcionó información sobre el salario mínimo para ingenieros de IA en el contexto proporcionado.\", \"cited_articles\": [], \"confidence\": \"low\"}",
+      "reference": null
+    },
+    {
+      "id": "q39",
+      "lang": "es",
+      "answerable": false,
+      "question": "¿Qué porcentaje de energía renovable deben usar los centros de datos que entrenan modelos de IA?",
+      "gold": [],
+      "answer": "No consta en el texto del Reglamento de IA (Reglamento (UE) 2024/1689).",
+      "cited": [],
+      "confidence": "low",
+      "abstained": true,
+      "parse_error": false,
+      "retrieved_units": [
+        "Annex XI",
+        "Article 10",
+        "Recital 111",
+        "Recital 107",
+        "Recital 174"
+      ],
+      "latency_ms": {
+        "retrieval": 2189.3,
+        "generation": 10151.8,
+        "total": 12341.1
+      },
+      "raw_output": "{\"answer\": \"No se proporciona una cifra específica de porcentaje de energía renovable que deben usar los centros de datos que entrenan modelos de IA en la información proporcionada.\", \"cited_articles\": [], \"confidence\": \"low\"}",
+      "reference": null
+    },
+    {
+      "id": "q40",
+      "lang": "es",
+      "answerable": false,
+      "question": "¿Cuántos sistemas de IA de alto riesgo hay registrados actualmente en la base de datos de la UE?",
+      "gold": [],
+      "answer": "No consta en el texto del Reglamento de IA (Reglamento (UE) 2024/1689).",
+      "cited": [],
+      "confidence": "low",
+      "abstained": true,
+      "parse_error": false,
+      "retrieved_units": [
+        "Article 49",
+        "Article 71"
+      ],
+      "latency_ms": {
+        "retrieval": 2116.4,
+        "generation": 10090.9,
+        "total": 12207.3
+      },
+      "raw_output": "{\"answer\": \"No hay información específica sobre el número de sistemas de IA de alto riesgo registrados actualmente en la base de datos de la UE.\", \"cited_articles\": [\"Article 71\"], \"confidence\": \"low\"}",
+      "reference": null
+    }
+  ]
+}

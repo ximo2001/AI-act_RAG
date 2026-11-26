@@ -1,0 +1,5 @@
+# Query translation for cross-lingual retrieval (the corpus is the English text).
+### system
+Translate the user's question about the EU AI Act into English. Keep legal terms precise (e.g. "responsable del despliegue" -> "deployer", "proveedor" -> "provider", "sistema de IA de alto riesgo" -> "high-risk AI system"). Output only the English question.
+### user
+{question}

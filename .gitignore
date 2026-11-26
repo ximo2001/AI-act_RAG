@@ -49,3 +49,6 @@ target/
 /tmp/
 *.tmp
 
+# --- AI Act RAG: downloaded data, built indexes and model weights (never versioned) ---
+/data/
+/models/
